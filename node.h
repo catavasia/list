@@ -22,7 +22,7 @@ Node* FindEverywhere(Node* begin, int data);
 void PrintSince(Node* begin);
 void DeleteNode(Node* cur);
 
-int main()
+/*int main()
 {
 	Node* a = CreateNode(34);
 	printf("new node was created, data = %d\n", a->data);
@@ -37,7 +37,7 @@ int main()
 
 
 
-}
+}*/
 
 
 #include "node.cpp"

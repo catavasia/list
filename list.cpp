@@ -10,17 +10,18 @@ void DeleteNodeFromList(List* list, Node* cur);
 Node* Search(List* list, int data);
 void AddToHeadList(List* list, Node* new_node);
 void DeleteList(List* list);
+
 int main()
 {
 	List* new_list = CreateList();
 	
-	Node* cur = Search(new_list, 7);
-	printf("cur  %p\n", cur);
+	//Node* cur = Search(new_list, 7);
+	/*printf("cur  %p\n", cur);
 	printf("new_node %p\n", new_node);
 	printf("a %p\n", a);
 	printf("b %p\n", b);
 	printf("list head %p\n", new_list->head);
-	printf("b next  %p\n", b->next);
+	printf("b next  %p\n", b->next);*/
 	//printf("OK\n");
 	/*printf("size of int is %lu\n", sizeof(int));
 	printf("size of pointer is %lu\n", sizeof(int*));
@@ -56,6 +57,15 @@ int main()
 	//int check = CheckPtr(n);
 	//printf("check is %d", check);
 	return 0;
+}
+
+List* CreateList()
+{
+	List* new_list = new List;
+	new_list->head = NULL;
+	new_list->size = 0;
+	//printf("list was created\n");
+	return new_list;
 }
 
 void DeleteNodeFromList(List* list, Node* cur)
@@ -99,10 +109,4 @@ void DeleteList(List* list)
 		cur = cur->next;
 	}
 }
-int CheckPtr(Node* cur)
-{
-	if(cur == NULL)
-		return PTR_NULL;
-	else
-		return PTR_OK;
-}
+
